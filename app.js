@@ -37,28 +37,28 @@ function setStatus(msg){ els.status.textContent = msg; }
 function clamp(n, a, b){ return Math.max(a, Math.min(b, n)); }
 
 function fmtTime(date, tz){
-  return new Intl.DateTimeFormat(undefined, { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: tz }).format(date);
+  return new Intl.DateTimeFormat('nl-NL', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: tz }).format(date);
 }
 function fmtDate(date, tz){
-  return new Intl.DateTimeFormat(undefined, { weekday:'long', day:'2-digit', month:'short', year:'numeric', timeZone: tz }).format(date);
+  return new Intl.DateTimeFormat('nl-NL', { weekday:'long', day:'2-digit', month:'short', year:'numeric', timeZone: tz }).format(date);
 }
 function fmtDay(date, tz){
-  return new Intl.DateTimeFormat(undefined, { weekday:'long', day:'2-digit', month:'short', timeZone: tz }).format(date);
+  return new Intl.DateTimeFormat('nl-NL', { weekday:'long', day:'2-digit', month:'short', timeZone: tz }).format(date);
 }
 
 function wmoToText(code){
   // Based on Open‑Meteo WMO weather interpretation codes.
   const map = new Map([
-    [0,'Clear'], [1,'Mainly clear'], [2,'Partly cloudy'], [3,'Overcast'],
-    [45,'Fog'], [48,'Depositing rime fog'],
-    [51,'Light drizzle'], [53,'Drizzle'], [55,'Dense drizzle'],
+    [0,'Helder'], [1,'Licht bewolkt'], [2,'Half bewolkt'], [3,'Bewolkt'],
+    [45,'Mist'], [48,'Depositing rime fog'],
+    [51,'Lichte motregen'], [53,'Motregen'], [55,'Zware motregen'],
     [56,'Freezing drizzle'], [57,'Freezing drizzle'],
-    [61,'Slight rain'], [63,'Rain'], [65,'Heavy rain'],
+    [61,'Lichte regen'], [63,'Regen'], [65,'Zware regen'],
     [66,'Freezing rain'], [67,'Freezing rain'],
-    [71,'Slight snow'], [73,'Snow'], [75,'Heavy snow'],
-    [77,'Snow grains'], [80,'Rain showers'], [81,'Rain showers'], [82,'Violent rain showers'],
-    [85,'Snow showers'], [86,'Heavy snow showers'],
-    [95,'Thunderstorm'], [96,'Thunderstorm hail'], [99,'Thunderstorm hail']
+    [71,'Lichte sneeuw'], [73,'Sneeuw'], [75,'Zware sneeuw'],
+    [77,'Sneeuw grains'], [80,'Regen showers'], [81,'Regen showers'], [82,'Violent rain showers'],
+    [85,'Sneeuw showers'], [86,'Zware sneeuw showers'],
+    [95,'Onweer'], [96,'Onweer hail'], [99,'Onweer hail']
   ]);
   return map.get(code) ?? '—';
 }
@@ -378,7 +378,7 @@ function init(){
     });
   } else {
     // Default city
-    loadCity({ name:'Athens', admin1:'', country:'GR', latitude:37.9838, longitude:23.7275, timezone:'Europe/Athens' })
+    loadCity({ name:'Amsterdam', admin1:'Noord-Holland', country:'NL', latitude:52.3676, longitude:4.9041, timezone:'Europe/Amsterdam' })
       .catch(err => setStatus(err.message));
   }
 

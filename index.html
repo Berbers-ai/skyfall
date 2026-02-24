@@ -8,8 +8,8 @@
   <title>Weather</title>
 
   <link rel="manifest" href="manifest.json" />
-  <link rel="icon" href="icons/icon-192.png" />
-  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="icon" href="icon-192.png" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
@@ -21,18 +21,18 @@
       <label class="toggle">
         <input id="darkToggle" type="checkbox" />
         <span class="toggle-ui" aria-hidden="true"></span>
-        <span class="toggle-label">Dark Mode</span>
+        <span class="toggle-label">Donkere modus</span>
       </label>
 
       <div class="search">
         <span class="search-ico" aria-hidden="true">🔎</span>
-        <input id="cityInput" type="search" placeholder="Search for your preferred city..." autocomplete="off" />
+        <input id="cityInput" type="search" placeholder="Zoek naar een stad..." autocomplete="off" />
         <div id="suggestions" class="suggestions" hidden></div>
       </div>
 
       <button id="btnLocate" class="btn btn-green" type="button">
         <span class="btn-ico" aria-hidden="true">🎯</span>
-        <span>Current Location</span>
+        <span>Huidige locatie</span>
       </button>
     </header>
 
@@ -49,7 +49,7 @@
         <div class="now-left">
           <div class="temp-row">
             <div class="temp" id="tempNow">--°C</div>
-            <div class="feels">Feels like: <span id="feelsNow">--°C</span></div>
+            <div class="feels">Gevoelstemperatuur: <span id="feelsNow">--°C</span></div>
           </div>
 
           <div class="sun-row">
@@ -79,17 +79,17 @@
           <div class="metric">
             <div class="metric-ico" aria-hidden="true">〰️</div>
             <div class="metric-val" id="humidity">--%</div>
-            <div class="metric-lab">Humidity</div>
+            <div class="metric-lab">Luchtvochtigheid</div>
           </div>
           <div class="metric">
             <div class="metric-ico" aria-hidden="true">💨</div>
             <div class="metric-val" id="wind">-- km/h</div>
-            <div class="metric-lab">Wind Speed</div>
+            <div class="metric-lab">Windsnelheid</div>
           </div>
           <div class="metric">
             <div class="metric-ico" aria-hidden="true">⏲️</div>
             <div class="metric-val" id="pressure">---- hPa</div>
-            <div class="metric-lab">Pressure</div>
+            <div class="metric-lab">Luchtdruk</div>
           </div>
           <div class="metric">
             <div class="metric-ico" aria-hidden="true">UV</div>
@@ -100,12 +100,12 @@
       </article>
 
       <article class="card card-tall forecast5">
-        <h3>5 Days Forecast:</h3>
+        <h3>5-daagse verwachting:</h3>
         <div id="daysList" class="days-list"></div>
       </article>
 
       <article class="card card-wide hourly">
-        <h3>Hourly Forecast:</h3>
+        <h3>Uurlijkse verwachting:</h3>
         <div id="hourlyRow" class="hourly-row"></div>
       </article>
     </section>

@@ -1,13 +1,13 @@
 /* Service Worker for Weather PWA */
-const CACHE = 'weather-pwa-v1';
+const CACHE = 'weather-pwa-v2';
 const ASSETS = [
   './',
   './index.html',
   './styles.css',
   './app.js',
   './manifest.json',
-  './icons/icon-192.png',
-  './icons/icon-512.png',
+  './icon-192.png',
+  './icon-512.png',
   'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap'
 ];
 
